@@ -24,19 +24,7 @@ spring:
             allowed-headers: "*"
             allow-credentials: true
       routes:
-        - id: acopio-service
-          uri: lb://acopio-service
+        - id: test-service
+          uri: lb://test-service
           predicates:
-            - Path=/acopio/**
-        - id: planilla-service
-          uri: lb://pagofinal-service
-          predicates:
-            - Path=/planilla/**
-        - id: porcentaje-service
-          uri: lb://porcentaje-service
-          predicates:
-            - Path=/porcentaje/**
-        - id: proveedor-service
-          uri: lb://proveedor-service
-          predicates:
-            - Path=/proveedor/**
+            - Path=/test/**
